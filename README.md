@@ -103,12 +103,5 @@ Khi thực thi hàm `saveOrUpdateOrder`, hệ thống hoạt động như sau:
 
 ---
 
-## 5. Cảnh báo an ninh về thông tin nhạy cảm (Security & Sensitive Data)
 
-Trước khi chia sẻ mã nguồn này lên các nền tảng lưu trữ công khai như GitHub, bạn cần lưu ý các vấn đề an ninh an toàn thông tin đặc biệt quan trọng sau:
-
-1. **Telegram Token và Chat ID:** Đối tượng `CONFIG` có chứa hai trường giá trị `TELEGRAM_BOT_TOKEN` và `TELEGRAM_CHAT_ID`. Nếu bạn đã điền thông tin Bot thực tế của mình vào đây, **tuyệt đối không được push mã nguồn lên GitHub**. Nếu kẻ xấu nắm giữ Bot Token của bạn, họ có thể chiếm quyền điều khiển Bot và gửi tin nhắn rác hoặc khai thác thông tin trái phép.
-2. **Thông tin cá nhân trong Email Test:** Trong quá trình phát triển, nếu bạn có tạo các hàm test kiểm tra văn bản thô vào biến chuỗi (giống như `sampleMailPayment` ở các phiên bản thử nghiệm trước đó), hãy đảm bảo xóa bỏ hoàn toàn các đoạn text chứa Tên thật, Số điện thoại thật và Địa chỉ nhà thật của bạn trước khi public.
-3. **Giải pháp bảo mật khi public GitHub:**
-* Hãy giữ hai trường `TELEGRAM_BOT_TOKEN` và `TELEGRAM_CHAT_ID` luôn là các chuỗi trống hoặc chuỗi giữ chỗ placeholder (ví dụ: `"ĐIỀN_TOKEN_CỦA_BẠN_TẠI_ĐÂY"`).
 * Nếu muốn chạy thực tế kèm theo chia sẻ code sạch, bạn nên sử dụng lớp biểu diễn thuộc tính hệ thống của Google Apps Script `PropertiesService.getScriptProperties().getProperty('TG_TOKEN')` để lưu các khóa bí mật vào môi trường Script của riêng bạn mà không lo can thiệp vào file mã nguồn cứng.
