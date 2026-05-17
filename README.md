@@ -15,6 +15,7 @@ HÌnh ảnh minh hoạ bot hoạt động:
 
 
 
+<img width="2536" height="561" alt="image" src="https://github.com/user-attachments/assets/c43bd895-af5d-4fa6-a97b-aceae2f1ef06" />
 
 
 
